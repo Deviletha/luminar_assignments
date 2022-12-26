@@ -13,7 +13,6 @@ void main() {
 class SplashScreen extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => _SplashScreenState();
-
 }
 
 class _SplashScreenState extends State {
@@ -25,28 +24,31 @@ class _SplashScreenState extends State {
     });
   }
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       body: Container(
         decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            begin:  Alignment.bottomRight,
-            end: Alignment.topRight,
-            colors: [
+            gradient: LinearGradient(
+                begin: Alignment.bottomRight,
+                end: Alignment.topRight,
+                colors: [
               Colors.blueGrey,
               Colors.lightGreen,
               Colors.tealAccent
-            ])
-        ),
+            ])),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: const [ Icon(Icons.contact_phone_rounded,size: 80),
-              Text("My Contacts",
-                style: TextStyle(fontSize: 35, color: Colors.black, fontWeight: FontWeight.bold),)
+            children: const [
+              Icon(Icons.contact_phone_rounded, size: 80),
+              Text(
+                "My Contacts",
+                style: TextStyle(
+                    fontSize: 35,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold),
+              )
             ],
           ),
         ),
