@@ -1,13 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:luminar_assignments/Login%20and%20Signup/sign_up_page.dart';
 
-void main() {
-  runApp(MaterialApp(
-    home: loginpage(),
-  ));
-}
-
-class loginpage extends StatefulWidget{
+class loginpage extends StatefulWidget {
   @override
   State<loginpage> createState() => _loginpageState();
 }
@@ -15,6 +10,7 @@ class loginpage extends StatefulWidget{
 class _loginpageState extends State<loginpage> {
   var formkey = GlobalKey<FormState>();
   bool showpass = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,20 +18,20 @@ class _loginpageState extends State<loginpage> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-      Center(
-      child: Text(
-      "Login",
-        style: TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 40,
-            color: Colors.black),
-      ),
-      heightFactor: 2,
-    ),
-    Text(
-    "Welcome back! Login with your credentials",
-    style: TextStyle(fontSize: 13, color: Colors.black45),
-    ),
+          Center(
+            child: Text(
+              "Login",
+              style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 40,
+                  color: Colors.black),
+            ),
+            heightFactor: 2,
+          ),
+          Text(
+            "Welcome back! Login with your credentials",
+            style: TextStyle(fontSize: 15, color: Colors.black45),
+          ),
           Padding(
             padding: const EdgeInsets.all(10),
             child: TextFormField(
@@ -83,30 +79,37 @@ class _loginpageState extends State<loginpage> {
                       borderRadius: BorderRadius.circular(10))),
               textInputAction: TextInputAction.done,
               validator: (Password) {
-                if (Password!.isEmpty || Password.length<6) {
+                if (Password!.isEmpty || Password.length < 6) {
                   return "Enter a valid Password, length should be greater than 6";
-                }else{
+                } else {
                   return null;
                 }
               },
             ),
           ),
           SizedBox(
-            width: 300,
+            width: 450,
             height: 50,
             child: ElevatedButton(
-              onPressed: () { },
+              onPressed: () {},
               child: Text("Login"),
               style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.green,
                   shadowColor: Colors.green[300],
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(100),
+                    borderRadius: BorderRadius.circular(50),
                   )),
             ),
           ),
-    ],
-    ),
+          TextButton(
+            child: Text("Do you have an account? Sign Up",
+                style: TextStyle(fontSize: 15, color: Colors.black45)),
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => sign_up_page()));
+            },
+          ),
+        ],
+      ),
     );
   }
 }

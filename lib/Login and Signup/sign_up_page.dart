@@ -1,11 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-void main() {
-  runApp(MaterialApp(
-    home: sign_up_page(),
-  ));
-}
-
+import 'package:luminar_assignments/Login%20and%20Signup/login_page.dart';
 
 class sign_up_page extends StatefulWidget{
   @override
@@ -130,7 +125,7 @@ class _sign_up_pageState extends State<sign_up_page> {
           Center(
             heightFactor: 2,
             child: SizedBox(
-              width: 300,
+              width: 450,
               height: 50,
               child: ElevatedButton(
                 onPressed: () { },
@@ -138,11 +133,18 @@ class _sign_up_pageState extends State<sign_up_page> {
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.green[400],
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(100),
+                    borderRadius: BorderRadius.circular(50),
                   ),
                 ),
               ),
             ),
+          ),
+          TextButton(
+            child: Text("Do you have an account? Login",
+            style: TextStyle(fontSize: 15, color: Colors.black45)),
+            onPressed: () { Navigator.push(context, MaterialPageRoute(builder: (context) => loginpage()));
+              
+          },
           ),
         ],
       ),

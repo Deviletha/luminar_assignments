@@ -22,7 +22,7 @@ class _HomeState extends State<Home> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Center(
+          const Center(
             child: Text(
               "Hello There!",
               style: TextStyle(
@@ -32,7 +32,7 @@ class _HomeState extends State<Home> {
             ),
             heightFactor: 2,
           ),
-          Text(
+          const Text(
             "Autimatic identity verification which enable you to verify your identity",
             style: TextStyle(fontSize: 13, color: Colors.black45),
           ),
@@ -47,13 +47,10 @@ class _HomeState extends State<Home> {
             height: 50,
             child: ElevatedButton(
               onPressed: () {
-                final valid = formkey.currentState!.validate();
-                if (valid) {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => loginpage()));
-                }
               },
-              child: Text("Login"),
+              child: const Text("Login"),
               style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.green,
                   shadowColor: Colors.green[300],
@@ -69,13 +66,10 @@ class _HomeState extends State<Home> {
               height: 50,
               child: ElevatedButton(
                 onPressed: () {
-                  final valid = formkey.currentState!.validate();
-                  if (valid) {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => sign_up_page()));
-                  }
                 },
-                child: Text("Sign Up"),
+                child: const Text("Sign Up"),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.green[400],
                   shape: RoundedRectangleBorder(
