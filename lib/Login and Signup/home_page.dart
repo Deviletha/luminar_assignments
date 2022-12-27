@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:luminar_assignments/Login%20and%20Signup/login_page.dart';
+import 'package:luminar_assignments/Login%20and%20Signup/sign_up_page.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -6,7 +8,13 @@ void main() {
   ));
 }
 
-class Home extends StatelessWidget {
+class Home extends StatefulWidget {
+  @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  var formkey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,49 +28,63 @@ class Home extends StatelessWidget {
               style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 40,
-                  color: Colors.blue),
+                  color: Colors.black),
             ),
-            heightFactor: 3,
+            heightFactor: 2,
           ),
           Text(
             "Autimatic identity verification which enable you to verify your identity",
-            style: TextStyle(fontSize: 10, color: Colors.grey.shade200),
+            style: TextStyle(fontSize: 13, color: Colors.black45),
           ),
           const Image(
-              image: NetworkImage(
-                  "https://res.cloudinary.com/practicaldev/image/fetch/s--U_859tYO--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://thepracticaldev.s3.amazonaws.com/i/2c8au8e0emyyw1y2092o.png"),
-          height: 300,
-          width: 300,),
-          SizedBox(width:200,
-          height: 50,
-          child: ElevatedButton(onPressed: () { },
-          child: Text("Login"
+            image: NetworkImage(
+                "https://res.cloudinary.com/practicaldev/image/fetch/s--U_859tYO--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://thepracticaldev.s3.amazonaws.com/i/2c8au8e0emyyw1y2092o.png"),
+            height: 300,
+            width: 300,
           ),
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.green,
-              shadowColor: Colors.green.shade700,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(100),
-              )
+          SizedBox(
+            width: 300,
+            height: 50,
+            child: ElevatedButton(
+              onPressed: () {
+                final valid = formkey.currentState!.validate();
+                if (valid) {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => loginpage()));
+                }
+              },
+              child: Text("Login"),
+              style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.green,
+                  shadowColor: Colors.green[300],
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(100),
+                  )),
             ),
-          ),
           ),
           Center(
             heightFactor: 2,
             child: SizedBox(
-              width:300,
+              width: 300,
               height: 50,
-              child: ElevatedButton(onPressed: () { },
-                child: Text("Sign Up",style: TextStyle(color: Colors.blueGrey),
-                ),
-                style: ElevatedButton.styleFrom( backgroundColor: Colors.red,
+              child: ElevatedButton(
+                onPressed: () {
+                  final valid = formkey.currentState!.validate();
+                  if (valid) {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => sign_up_page()));
+                  }
+                },
+                child: Text("Sign Up"),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.green[400],
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(100),
                   ),
                 ),
               ),
             ),
-          )
+          ),
         ],
       ),
     );
