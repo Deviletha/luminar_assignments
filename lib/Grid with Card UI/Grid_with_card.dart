@@ -58,7 +58,6 @@ class Grid_with_card extends StatelessWidget {
             child: Container(
               decoration: BoxDecoration(borderRadius: BorderRadius.circular(20), color: color[index]),
 
-
               child: Center(
                 child: ListTile(
                   title: Text(name[index]),
