@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-void main() {
+  void main() {
   runApp(MaterialApp(
     home: Profile_UI(),
   ));
