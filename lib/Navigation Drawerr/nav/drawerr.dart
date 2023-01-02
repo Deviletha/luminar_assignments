@@ -85,7 +85,7 @@ class Navdrawer extends StatelessWidget {
               ),
               ListTile(
                 leading: Icon(Icons.settings),
-                title: Text("Settingd"),
+                title: Text("Settings"),
                 trailing: Icon(Icons.arrow_forward_ios),
               ),
               SizedBox(
