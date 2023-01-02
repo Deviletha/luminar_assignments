@@ -98,9 +98,9 @@ class Customchild extends StatelessWidget {
                   Text(
                     title,
                     style: const TextStyle(
-                        fontWeight: FontWeight.bold, fontSize: 16),
+                        fontWeight: FontWeight.bold, fontSize: 23),
                   ),
-                  Text(subtitle),
+                  Text(subtitle,style: TextStyle(color: Colors.blueGrey),),
                 ],
               ),
             )
