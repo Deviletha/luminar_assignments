@@ -1,76 +1,110 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/src/widgets/container.dart';
+import 'package:flutter/src/widgets/framework.dart';
 import 'package:staggered_grid_view_flutter/widgets/staggered_grid_view.dart';
 import 'package:staggered_grid_view_flutter/widgets/staggered_tile.dart';
 
 void main() {
-  runApp(MaterialApp(
-    home: staggered_gridvieww()
-  ));
+  runApp(MaterialApp(home: Staggered_Gridd()));
 }
 
-class staggered_gridvieww extends StatelessWidget {
+class Staggered_Gridd extends StatelessWidget {
+  //const StaggeredAssign({super.key});
+
   @override
   Widget build(BuildContext context) {
+    List<StaggeredTile> _staggeredStyle = const [
+      StaggeredTile.count(1, 1.3),
+      StaggeredTile.count(1, 2),
+      StaggeredTile.count(1, 1.3),
+      StaggeredTile.count(1, 2),
+      StaggeredTile.count(1, 1.3),
+    ];
+
+    List<Customchild> _tiles = const [
+      Customchild(
+          image:
+          'https://images.unsplash.com/photo-1602094395895-fb8070114e38?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGtvY2hpfGVufDB8fDB8fA%3D%3D&w=1000&q=80',
+          title: 'Sunset',
+          subtitle: '20 June 2022'),
+      Customchild(
+          image:
+          'https://images.unsplash.com/photo-1608768025783-3c2b04d00f21?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGxvd3xlbnwwfHwwfHw%3D&w=1000&q=80',
+          title: 'City view',
+          subtitle: '20 July 2022'),
+      Customchild(
+          image:
+          'https://media.istockphoto.com/id/1345840955/photo/sunset-at-the-beach-near-the-village-of-zoutelande-on-the-coast-of-the-province-zeeland.jpg?b=1&s=170667a&w=0&k=20&c=VNaesdGPS2IC6kYk6Y-vlYLCQFqSRCmghAn20kNXTg0=',
+          title: 'Sunrise',
+          subtitle: '20 August 2022'),
+      Customchild(
+          image:
+              'https://images.unsplash.com/photo-1607992922515-7e38329e65d4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bmF0dXJlJTIwaW1hZ2VzfGVufDB8fDB8fA%3D%3D&w=1000&q=80',
+          title: 'Nature',
+          subtitle: '20 September 2022'),
+      Customchild(
+          image: 'https://images.unsplash.com/photo-1504732099162-d8c9d5ba3bfd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8c29sbyUyMHRyYXZlbGxlcnxlbnwwfHwwfHw%3D&w=1000&q=80'
+              ,
+          title: 'Solo Traveller',
+          subtitle: '20 December2022')
+    ];
+
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          "Staggered Gridview",
-        ),
+        title: const Text('Staggered Gridview'),
       ),
-      body: StaggeredGridView.count(
-        crossAxisCount: 4,
-        mainAxisSpacing: 4,
-        crossAxisSpacing: 4,
-        staggeredTiles: [
-          StaggeredTile.count(2, 2),
-          StaggeredTile.count(2, 4),
-          StaggeredTile.count(1, 1),
-          StaggeredTile.count(2, 2),
-          StaggeredTile.count(1, 1),
-          StaggeredTile.count(2, 1),
-          StaggeredTile.count(2, 1),
-          StaggeredTile.count(2, 1),
-          StaggeredTile.count(2, 1),
-        ],
-        children: [
-          Customchild(images: Image.network("https://images.unsplash.com/photo-1634962004378-767581c1abaf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8aGltYWxheWFuJTIwYmlrZXxlbnwwfHwwfHw%3D&w=1000&q=80"),),
-          Customchild(images: Image.network("https://images.unsplash.com/photo-1613738049398-5cc8ef6292fd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aGltYWxheWFuJTIwYmlrZXxlbnwwfHwwfHw%3D&w=1000&q=80"),),
-          Customchild(text: Text("Devi Sai",style: TextStyle(fontWeight: FontWeight.bold),),),
-          Customchild(images: Image.network("https://images.unsplash.com/photo-1634962004378-767581c1abaf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8aGltYWxheWFuJTIwYmlrZXxlbnwwfHwwfHw%3D&w=1000&q=80"),),
-          Customchild(text: Text("Devi Sai",style: TextStyle(fontWeight: FontWeight.bold),),),
-          Customchild(images: Image.network("https://images.unsplash.com/photo-1634962004378-767581c1abaf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8aGltYWxheWFuJTIwYmlrZXxlbnwwfHwwfHw%3D&w=1000&q=80"),),
-          Customchild(text: Text("Devi Sai",style: TextStyle(fontWeight: FontWeight.bold),),),
-          Customchild(text: Text("Devi Sai",style: TextStyle(fontWeight: FontWeight.bold),),),
-               ],
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: StaggeredGridView.count(
+          mainAxisSpacing: 6,
+          crossAxisSpacing: 6,
+          crossAxisCount: 2,
+          staggeredTiles: _staggeredStyle,
+          children: _tiles,
+        ),
       ),
     );
   }
 }
 
 class Customchild extends StatelessWidget {
-  final Image? images;
-  final Text? text;
-
-  Customchild({this.images, this.text});
-
+  final String image;
+  final String title;
+  final String subtitle;
+  const Customchild({
+    Key? key,
+    required this.image,
+    required this.title,
+    required this.subtitle,
+  }) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        Card(
-          child: images,
-        ),
-        Padding(
-          padding: const EdgeInsets.only(top: 0,right: 50,left: 20),
-          child: Container(
-            child: ListTile(
-              title: images,
-              subtitle: text,
+    return Container(
+        color: Colors.grey[300],
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          //mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.network(image),
+            const SizedBox(
+              height: 10,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    title,
+                    style: const TextStyle(
+                        fontWeight: FontWeight.bold, fontSize: 16),
+                  ),
+                  Text(subtitle),
+                ],
+              ),
             )
-          ),
-        )
-      ],
-    );
+          ],
+        ));
   }
 }
