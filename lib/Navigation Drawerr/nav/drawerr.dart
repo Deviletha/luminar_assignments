@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
 void main() {
   runApp(MaterialApp(home: Navdrawer()));
 }
-
 
 class Navdrawer extends StatelessWidget {
   @override
@@ -12,25 +12,27 @@ class Navdrawer extends StatelessWidget {
       appBar: AppBar(
         title: Text("Navigation Drawer"),
       ),
-      endDrawer: Theme(
-        data: Theme.of(context).copyWith(canvasColor: Colors.deepOrangeAccent[50]),
-        child: Drawer(
+      drawer: Drawer(
+        child: Container(
+          decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                  begin: Alignment.bottomRight,
+                  end: Alignment.topRight,
+                  colors: [
+                    Colors.orangeAccent,
+                    Colors.lightGreen,
+                    Colors.tealAccent
+                  ])),
           child: ListView(
             children: [
-              UserAccountsDrawerHeader(
-                accountName: Text("Deviletha Sai",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18),),
-                accountEmail: Text("devisai91@gmail.com"),
-                currentAccountPicture: GestureDetector(
-                  onTap: ( ) {
-                    print("Current Profile");
-                  },
-                  child: CircleAvatar(
-                    backgroundImage: NetworkImage("https://media.istockphoto.com/id/1354205468/photo/portrait-of-beautiful-indian-it-programmer-working-on-desktop-computer-smiling-and-looking-at.jpg?b=1&s=170667a&w=0&k=20&c=1fdU1ajrv4UmxMLJStAvvIx5A9nBAV4VGJ7ThlUN0_E="),),
-                ),
-                decoration: BoxDecoration(image: DecorationImage(
-                    image: NetworkImage(
-                        "https://images.unsplash.com/photo-1570215171655-49dc3fa810b2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8c29mdHdhcmUlMjBkZXZlbG9wZXJzfGVufDB8fDB8fA%3D%3D&w=1000&q=80"),
-                    fit: BoxFit.cover)
+              const ListTile(
+                title: Text("Deviletha Sai"),
+                subtitle: Text("devisai91@gmail.com"),
+                trailing: Icon(Icons.close),
+                leading: CircleAvatar(
+                  backgroundImage: NetworkImage(
+                      "https://media.istockphoto.com/id/1354205468/photo/portrait-of-beautiful-indian-it-programmer-working-on-desktop-computer-smiling-and-looking-at.jpg?b=1&s=170667a&w=0&k=20&c=1fdU1ajrv4UmxMLJStAvvIx5A9nBAV4VGJ7ThlUN0_E="),
+                  radius: 40,
                 ),
               ),
               ListTile(
@@ -87,6 +89,10 @@ class Navdrawer extends StatelessWidget {
                 leading: Icon(Icons.settings),
                 title: Text("Settings"),
                 trailing: Icon(Icons.arrow_forward_ios),
+              ),
+              SizedBox(
+                width: 200,
+                height: 50,
               ),
               SizedBox(
                 width: 200,
