@@ -14,7 +14,7 @@ class Profile_UI extends StatelessWidget{
       appBar: AppBar(actions: [Icon(Icons.table_rows)], title: Text("Profile"),),
 
       body: Container(
-        height: 900,
+        height: 1000,
         width: 500,
         child: Stack(
             children: [
