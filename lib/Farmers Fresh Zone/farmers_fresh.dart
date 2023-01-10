@@ -159,8 +159,8 @@ class _Farmers_FreshState extends State<Farmers_Fresh> {
                       ),
                     ], options: CarouselOptions(
                         autoPlay: true,
-                        viewportFraction: 3,
-                        height: 200,
+                        viewportFraction: 1,
+                        height: 250,
                         enlargeCenterPage: true,
                         aspectRatio: 16 / 9,
                         autoPlayCurve: Curves.bounceOut,
@@ -289,6 +289,7 @@ class Vegetables_grid extends StatelessWidget {
   Widget build(BuildContext context) {
     return GridView.builder(
         shrinkWrap: true,
+        physics: NeverScrollableScrollPhysics(),
         padding: const EdgeInsets.all(10.0),
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 3, crossAxisSpacing: 2, mainAxisSpacing: 2),
@@ -298,21 +299,25 @@ class Vegetables_grid extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
-                height: MediaQuery.of(context).size.height / 10,
-                width: MediaQuery.of(context).size.width * .3,
-                decoration: BoxDecoration(
-                  boxShadow: [BoxShadow(color: Colors.green,blurRadius: 15,),],
-                  borderRadius: BorderRadius.circular(10),
+              Column(
+                children: [
+                  Container(
+                    height: MediaQuery.of(context).size.height / 10,
+                    width: MediaQuery.of(context).size.width * .3,
+                    decoration: BoxDecoration(
+                      boxShadow: [BoxShadow(color: Colors.green,blurRadius: 8,),],
+                      borderRadius: BorderRadius.circular(10),
           image: DecorationImage(
           fit: BoxFit.cover,
           image: NetworkImage(images[index])),
           ),
           ),
-              const SizedBox(
-                height: 8,
+                  const SizedBox(
+                    height: 8,
+                  ),
+                  Container(child: Center(child: Text(name[index]))),
+                ],
               ),
-              Center(child: Text(name[index])),
             ],
           );
         });

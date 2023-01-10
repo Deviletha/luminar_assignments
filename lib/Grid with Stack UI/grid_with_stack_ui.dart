@@ -29,7 +29,8 @@ class Gridstackk extends StatelessWidget {
       ),
       body: GridView.builder(
         gridDelegate:
-            const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+            const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2
+            ),
         itemBuilder: (context, index) {
           return Padding(
             padding: EdgeInsets.only(bottom: 10, left: 10, right: 10, top: 10),
