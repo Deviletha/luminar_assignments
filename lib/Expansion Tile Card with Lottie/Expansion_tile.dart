@@ -13,9 +13,12 @@ class Expansion_tilee extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey,
+      backgroundColor: Colors.blueGrey,
       body: ListView(
         children: [
+          SizedBox(
+            height: 20,
+          ),
           Center(
               child: Text(
             "EXPERIENCE",
@@ -28,7 +31,7 @@ class Expansion_tilee extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(40)),
                 child: Lottie.network(
-                    "https://assets5.lottiefiles.com/packages/lf20_y5ljuke8.json",
+                    "https://assets5.lottiefiles.com/packages/lf20_3tx77jaz.json",
                     fit: BoxFit.fill,
                     height: 150,
                     width: 500),
@@ -91,7 +94,6 @@ class Expansion_tilee extends StatelessWidget {
                           fontSize: 20)),
                   children: [
                     Container(
-                      color: Colors.black,
                       child: ListTile(
                         leading: CircleAvatar(
                           backgroundImage: NetworkImage(
@@ -99,7 +101,6 @@ class Expansion_tilee extends StatelessWidget {
                         ),
                         title: Text(
                           "Duration : 2 months",
-                          style: TextStyle(color: Colors.white),
                         ),
                       ),
                     ),
