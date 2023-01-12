@@ -41,6 +41,7 @@ dependencies:
   flutter_svg:
   flutter_rating_bar:
   expansion_tile_card: ^2.0.0
+  lottie: ^2.1.0
 
 
   # The following adds the Cupertino Icons font to your application.
