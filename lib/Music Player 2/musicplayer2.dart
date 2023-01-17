@@ -43,7 +43,7 @@ class _Music2State extends State<Music2> {
             selectedIndex = index;
           });
         },
-        iconSize: 30,
+        iconSize: 20,
         selectedIndex: selectedIndex,
         barItems: [
           BarItem(
@@ -79,15 +79,16 @@ class _Music2State extends State<Music2> {
 class Musics_grid extends StatelessWidget {
 
   List<String>images = [
-    "https://st3.depositphotos.com/1006899/12789/i/600/depositphotos_127893414-stock-photo-special-offer-sign-symbol.jpg",
-    "https://media.istockphoto.com/id/98026003/photo/tomatoes.jpg?b=1&s=170667a&w=0&k=20&c=MIz_LKVtdnXExJyOG1sltnt9p9Lw_YtsNi_YeCCDnHo=",
-    "https://images.unsplash.com/photo-1488551511020-571c741f122a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80",
-    "https://media.istockphoto.com/id/995518546/photo/assortment-of-colorful-ripe-tropical-fruits-top-view.jpg?b=1&s=170667a&w=0&k=20&c=frnzxYjtn8MP9kpLy7AY2DU_s9ohVBlAflpUacaDx7w=",
-    "https://media.istockphoto.com/id/803556536/photo/fruit-fresh-mixed-tropical-fruit-salad-bowl-of-healthy-fresh-fruit-salad-died-and-fitness.jpg?b=1&s=170667a&w=0&k=20&c=E8JmmwmySy918mn2P-w14BCohxaAOGbt2e6sZrNgmRw=",
-    "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aGVhbHRoeSUyMGZvb2R8ZW58MHx8MHx8&w=1000&q=80",
-    "https://images.unsplash.com/photo-1509358271058-acd22cc93898?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Zmxhdm91cnN8ZW58MHx8MHx8&w=1000&q=80",
-    "https://media.istockphoto.com/id/1075446340/photo/various-fresh-mix-salad-leaves-with-tomato-in-bowl-on-wooden-background.jpg?b=1&s=170667a&w=0&k=20&c=8dNVZB6mZPLjh5fZY7NmiMcfsJX_UY3HfGbRnlYVEfM=",
-    "https://images.unsplash.com/photo-1553787434-45e1d245bfbb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8b3JnYW5pYyUyMGZvb2R8ZW58MHx8MHx8&w=1000&q=80"
+    "https://images.unsplash.com/photo-1516280440614-37939bbacd81?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bmV3JTIwbXVzaWN8ZW58MHx8MHx8&w=1000&q=80",
+    "https://media.istockphoto.com/id/958364166/photo/girl-in-headphones-listening-to-music-in-the-city-at-sunset.jpg?b=1&s=170667a&w=0&k=20&c=4fLCctdgv1eajvvzq4zKwUGfMbK7BC53gyKJ3Cx8rkY=",
+    "https://media.istockphoto.com/id/1199243596/photo/concert-stage-on-rock-festival-music-instruments-silhouettes.jpg?b=1&s=170667a&w=0&k=20&c=YyK_M2YtGirW4gQpdvP4pPuuEQ4UGNrtEWIlKcP6ze8=",
+    "https://images.unsplash.com/photo-1600779547877-be592ef5aad3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bGl2ZXxlbnwwfHwwfGJsdWV8&w=1000&q=80",
+    "https://media.istockphoto.com/id/1247853982/photo/cheering-crowd-with-hands-in-air-at-music-festival.jpg?b=1&s=170667a&w=0&k=20&c=FXD3auZtrihGRLRbKTBkq0WbT44HhaiNj4V6gcsQgFY=",
+    "https://images.unsplash.com/photo-1611008457430-21544a3d3d85?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YWxhYmFuemF8ZW58MHx8MHx8&w=1000&q=80",
+    "https://images.unsplash.com/photo-1525926477800-7a3b10316ac6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fG11c2ljJTIwYXJ0aXN0c3xlbnwwfHwwfHw%3D&w=1000&q=80",
+    "https://media.istockphoto.com/id/535403859/photo/dancing-at-disco.jpg?b=1&s=170667a&w=0&k=20&c=qYFw0N29Aa6RHZvaSSXAu7ed9DZv-636ZCyTiKLZeYM=",
+    "https://media.istockphoto.com/id/1279654034/photo/studio-microphone-and-pop-shield-on-mic-in-the-empty-recording-studio-with-copy-space.jpg?b=1&s=170667a&w=0&k=20&c=bw8TATpYbFE6vaX6czvC0WJJA_i_NsUijRG8Z0V-UDs=",
+    "https://images.unsplash.com/photo-1616356601595-8af46b090cc4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8bXVzaWMlMjBwbGF5ZXJ8ZW58MHx8MHx8&w=1000&q=80"
   ];
 
   @override
