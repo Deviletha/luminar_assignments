@@ -57,7 +57,7 @@ class Musics extends StatelessWidget{
                                 width: 370,
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(30),
-                                  child: const Card(
+                                  child: Card(
                                     child: Image(
                                       image: NetworkImage(
                                           "https://media.istockphoto.com/id/1400623377/photo/studio-microphone-in-neon-lights-sound-recording-equipment.jpg?b=1&s=170667a&w=0&k=20&c=j2Ibz07SF1G_Oj5waggAuKWMYT_iB6gBSHUKHlRkD7Q="),
@@ -71,7 +71,7 @@ class Musics extends StatelessWidget{
                                 width: 370,
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(30),
-                                  child: const Card(
+                                  child: Card(
                                     child: Image(
                                       image: NetworkImage(
                                           "https://media.istockphoto.com/id/538479389/photo/dj-mixer-with-headphones.jpg?b=1&s=170667a&w=0&k=20&c=tl0QBPrInjHZyFwH8fn1_G2jhVe3wqqMe_wWMD4kk50="),
@@ -85,7 +85,7 @@ class Musics extends StatelessWidget{
                                 width: 370,
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(30),
-                                  child: const Card(
+                                  child: Card(
                                     child: Image(
                                       image: NetworkImage(
                                           "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80"),
@@ -126,7 +126,7 @@ class Musics extends StatelessWidget{
                       Padding(
                         padding: const EdgeInsets.only(left: 10, top: 10),
                         child: ListTile(
-                          leading: const CircleAvatar(
+                          leading: CircleAvatar(
                             backgroundImage: NetworkImage(
                                 "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTd8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80"),
                           ),
@@ -144,7 +144,7 @@ class Musics extends StatelessWidget{
                                 Icons.star_border_outlined,
                                 color: Colors.pinkAccent[100],
                               ),
-                              const SizedBox(
+                              SizedBox(
                                 width: 10,
                               ),
                               Icon(
@@ -158,7 +158,7 @@ class Musics extends StatelessWidget{
                       Padding(
                         padding: const EdgeInsets.only(left: 10, top: 10),
                         child: ListTile(
-                          leading: const CircleAvatar(
+                          leading: CircleAvatar(
                             backgroundImage: NetworkImage(
                                 "https://th.bing.com/th/id/OIP.V2MuImi8hW9MD0xbWE3wZAHaHa?pid=ImgDet&rs=1"),
                           ),
@@ -190,7 +190,7 @@ class Musics extends StatelessWidget{
                       Padding(
                         padding: const EdgeInsets.only(left: 10, top: 10),
                         child: ListTile(
-                          leading: const CircleAvatar(
+                          leading: CircleAvatar(
                             backgroundImage: NetworkImage(
                                 "https://media.istockphoto.com/id/1369567653/photo/thoughtful-serious-african-american-teen-girl-face-portrait.jpg?b=1&s=170667a&w=0&k=20&c=BSJgtAV6TQ7lysuk5_s1lk6kUAZIjzgxZx6XY80oCNQ="),
                           ),
@@ -198,7 +198,7 @@ class Musics extends StatelessWidget{
                             "Lift Me UP ",
                             style: TextStyle(color: Colors.pinkAccent[100]),
                           ),
-                          subtitle: const Text(
+                          subtitle: Text(
                             "Rihaana",
                             style: TextStyle(color: Colors.white),
                           ),
@@ -208,7 +208,7 @@ class Musics extends StatelessWidget{
                                 Icons.star_border_outlined,
                                 color: Colors.pinkAccent[100],
                               ),
-                              const SizedBox(
+                              SizedBox(
                                 width: 10,
                               ),
                               Icon(
@@ -222,7 +222,7 @@ class Musics extends StatelessWidget{
                       Padding(
                         padding: const EdgeInsets.only(left: 10, top: 10),
                         child: ListTile(
-                          leading: const CircleAvatar(
+                          leading: CircleAvatar(
                             backgroundImage: NetworkImage(
                                 "https://media.istockphoto.com/id/947804676/photo/business-woman-is-depressed-she-felt-stressed-and-alone-in-the-house.jpg?b=1&s=170667a&w=0&k=20&c=a_kH182_MnBPLHhQS7QcZ86O_BvgJ0tMl1-Y3eh5Ges="),
                           ),
@@ -230,7 +230,7 @@ class Musics extends StatelessWidget{
                             "Depression",
                             style: TextStyle(color: Colors.pinkAccent[100]),
                           ),
-                          subtitle: const Text(
+                          subtitle: Text(
                             "Dax",
                             style: TextStyle(color: Colors.white),
                           ),
@@ -240,7 +240,7 @@ class Musics extends StatelessWidget{
                                 Icons.star_border_outlined,
                                 color: Colors.pinkAccent[100],
                               ),
-                              const SizedBox(
+                              SizedBox(
                                 width: 10,
                               ),
                               Icon(
@@ -254,7 +254,7 @@ class Musics extends StatelessWidget{
                       Padding(
                         padding: const EdgeInsets.only(left: 10, top: 10),
                         child: ListTile(
-                          leading: const CircleAvatar(
+                          leading: CircleAvatar(
                             backgroundImage: NetworkImage(
                                 "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Nnx8fGVufDB8fHx8&w=1000&q=80"),
                           ),
@@ -262,7 +262,7 @@ class Musics extends StatelessWidget{
                             "I'm Good",
                             style: TextStyle(color: Colors.pinkAccent[100]),
                           ),
-                          subtitle: const Text(
+                          subtitle: Text(
                             "David Guietta & Bebe Rexha",
                             style: TextStyle(color: Colors.white),
                           ),
@@ -272,7 +272,7 @@ class Musics extends StatelessWidget{
                                 Icons.star_border_outlined,
                                 color: Colors.pinkAccent[100],
                               ),
-                              const SizedBox(
+                              SizedBox(
                                 width: 10,
                               ),
                               Icon(
@@ -295,14 +295,14 @@ class Musics extends StatelessWidget{
                                   color: Colors.pinkAccent[100],
                                 ),
                                 label: "Home"),
-                            const BottomNavigationBarItem(
+                            BottomNavigationBarItem(
                               icon: Icon(
                                 Icons.search,
                                 color: Colors.white,
                               ),
                               label: "Search",
                             ),
-                            const BottomNavigationBarItem(
+                            BottomNavigationBarItem(
                                 icon: Icon(
                                   Icons.save_rounded,
                                   color: Colors.white,
