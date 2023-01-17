@@ -40,7 +40,6 @@ class _Farmers_FreshState extends State<Farmers_Fresh> {
             bottom: AppBar(
               title: Container(
                 color: Colors.green[100],
-                width: double.infinity,
                 height: 40,
                 child: const Center(
                   child: TextField(

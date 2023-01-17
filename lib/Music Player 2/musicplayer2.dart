@@ -19,6 +19,7 @@ class _Music2State extends State<Music2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(backgroundColor: Colors.black,
+      
       appBar: AppBar(title: Center(
         child: Text(
           "Playlists",
@@ -29,12 +30,15 @@ class _Music2State extends State<Music2> {
         ),
       ), backgroundColor: Colors.black,),
 
-      body: PageView(
-          physics: NeverScrollableScrollPhysics(),
-          children: [
-            Musics_grid(),
-          ],
-        // controller: controller
+      body: SingleChildScrollView(
+        child: Column(
+        
+            children: [
+              search(),
+              Musics_grid(),
+            ],
+          // controller: controller
+        ),
       ),
       bottomNavigationBar: SlidingClippedNavBar.colorful(
         backgroundColor: Colors.black,
@@ -95,7 +99,7 @@ class Musics_grid extends StatelessWidget {
   Widget build(BuildContext context) {
     return GridView.builder(
         shrinkWrap: true,
-        //physics: NeverScrollableScrollPhysics(),
+        physics: NeverScrollableScrollPhysics(),
         padding: const EdgeInsets.all(10.0),
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2, crossAxisSpacing: 2, mainAxisSpacing: 2),
@@ -127,4 +131,29 @@ class Musics_grid extends StatelessWidget {
             );
         });
   }
+}
+class search extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Container(
+          color: Colors.grey,
+          height: 40,
+          child: const Center(
+            child: Padding(
+              padding: EdgeInsets.all(8.0),
+              child: TextField(
+                decoration: InputDecoration(
+                    hintText: 'Search...',
+                    suffixIcon: Icon(Icons.search_sharp)
+                ),
+              ),
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+
 }
