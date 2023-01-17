@@ -26,7 +26,7 @@ class _Music2State extends State<Music2> {
           style: TextStyle(
               fontWeight: FontWeight.w600,
               fontSize: 40,
-              color: Colors.pinkAccent[100],),textAlign: TextAlign.center,
+              color: Colors.pink[100],),textAlign: TextAlign.center,
         ),
       ), backgroundColor: Colors.black,),
 
@@ -137,16 +137,18 @@ class search extends StatelessWidget{
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Container(
-          color: Colors.grey,
-          height: 40,
-          child: const Center(
-            child: Padding(
-              padding: EdgeInsets.all(8.0),
+        Padding(
+          padding: const EdgeInsets.all(20),
+          child: Container(
+            color: Colors.pink[100],
+            height: 50,
+            child: Center(
               child: TextField(
                 decoration: InputDecoration(
-                    hintText: 'Search...',
-                    suffixIcon: Icon(Icons.search_sharp)
+                    hintText: '    Search...',
+                    suffixIcon: Icon(Icons.search_sharp),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(40)),
                 ),
               ),
             ),
