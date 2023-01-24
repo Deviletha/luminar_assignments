@@ -1,57 +1,38 @@
-mport 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: third(),
-  ));
-}
-
-class third extends StatefulWidget {
-  @override
-  State<third> createState() => _thirdState();
-}
-
-class _thirdState extends State<third> {
+class UItask_3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        height: MediaQuery.of(context).size.height * 1,
-        width: MediaQuery.of(context).size.width * 1,
-        decoration: BoxDecoration(
-            image: DecorationImage(
-                image: NetworkImage(
-                    "https://images.unsplash.com/photo-1635776062043-223faf322554?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80"),
-                fit: BoxFit.cover)),
+        height: double.infinity,
+        width: double.infinity,
+        decoration: const BoxDecoration(
+            gradient: LinearGradient(
+                begin: Alignment.bottomLeft,
+                end: Alignment.topRight,
+                colors: [
+              Color(0xff81d4f4),
+              Colors.white70,
+              Color(0xfff48bbd),
+            ])),
         child: Column(
           children: [
-            Container(
-              height: 33,
-              width: double.infinity,
-              color: Colors.black,
-              child: Text(
-                "Upload",
-                style: TextStyle(color: Colors.grey[600], fontSize: 25),
-              ),
+            SizedBox(
+              height: 40,
             ),
-            Padding(
-              padding: const EdgeInsets.only(top: 30, right: 200),
-              child: Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Colors.white,
-                ),
-                height: 30,
-                width: 160,
-                child: Text(
-                  "< Rewards Wallet",
-                  style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.blue),
-                ),
+            Container(
+              child: Row(
+                children: [
+                  SizedBox(
+                    width: 20,
+                  ),
+                  Icon(Icons.arrow_back_ios, color: Colors.indigo),
+                  Text(
+                    "Rewards Wallet",
+                    style: TextStyle(fontSize: 25, color: Colors.indigo),
+                  )
+                ],
               ),
             ),
             Row(
@@ -59,85 +40,85 @@ class _thirdState extends State<third> {
                 Column(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(left: 25, top: 20),
+                      padding: const EdgeInsets.only(left: 20, top: 20),
                       child: Container(
+                        height: 70,
+                        width: 210,
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: Colors.blue,
-                        ),
-                        height: 60,
-                        width: 180,
+                            borderRadius: BorderRadius.circular(20),
+                            gradient: LinearGradient(
+                                begin: Alignment.bottomLeft,
+                                end: Alignment.topRight,
+                                colors: [Colors.indigo, Colors.indigoAccent])),
                         child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             Text(
                               "Total Balance",
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.bold),
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 10),
                             ),
                             Text(
                               "14,325 🪙",
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 24),
-                            ),
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 30),
+                            )
                           ],
                         ),
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(left: 25, top: 10),
+                      padding: const EdgeInsets.only(left: 20, top: 20),
                       child: Container(
+                        height: 70,
+                        width: 210,
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: Colors.white,
-                        ),
-                        width: 180,
-                        height: 50,
+                            borderRadius: BorderRadius.circular(20),
+                            border: Border.all(
+                              width: 1,
+                              color: Colors.grey,
+                            )),
                         child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
                                 Text(
-                                  "Redeemed",
+                                  "Redeemable",
                                   style: TextStyle(
-                                      color: Colors.black,
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.bold),
+                                      color: Colors.grey, fontSize: 15),
                                 ),
                                 Text(
-                                  "12,000 🪙",
+                                  "Points",
                                   style: TextStyle(
-                                      color: Colors.black,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 17),
+                                      color: Colors.grey, fontSize: 15),
                                 ),
+                                Text(
+                                  "12,000🪙",
+                                  style: TextStyle(
+                                      color: Colors.indigo, fontSize: 20),
+                                )
                               ],
                             ),
-                            VerticalDivider(
-                              color: Colors.black,
-                              thickness: 1,
-                              indent: 10,
-                              endIndent: 10,
-                            ),
                             Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
                                 Text(
-                                  "Expired ",
+                                  "Expired",
                                   style: TextStyle(
-                                      color: Colors.black,
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.bold),
+                                      color: Colors.grey, fontSize: 15),
                                 ),
                                 Text(
-                                  "1000 🪙",
+                                  "Points",
                                   style: TextStyle(
-                                      color: Colors.black,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 17),
+                                      color: Colors.grey, fontSize: 15),
                                 ),
+                                Text(
+                                  "12,000🪙",
+                                  style: TextStyle(
+                                      color: Colors.indigo, fontSize: 20),
+                                )
                               ],
                             )
                           ],
@@ -146,16 +127,18 @@ class _thirdState extends State<third> {
                     )
                   ],
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 20),
-                  child: Image(
-                    image: NetworkImage(
-                        "https://micaic.com/dil/GBw5oB75hYJ0PpQsmgDhpgAAAA.jpg"),
-                    height: 130,
-                    width: 200,
-                  ),
-                )
+                Container(
+                  height: 160,
+                  width: 190,
+                  decoration:
+                      BoxDecoration(borderRadius: BorderRadius.circular(20)),
+                  child:
+                      Image.asset("assets/icons/gift-box-6896265-5656011.png"),
+                ),
               ],
+            ),
+            SizedBox(
+              height: 10,
             ),
             Expanded(
               child: DefaultTabController(

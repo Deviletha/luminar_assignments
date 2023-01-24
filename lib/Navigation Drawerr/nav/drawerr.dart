@@ -14,14 +14,14 @@ class Navdrawer extends StatelessWidget {
       ),
       drawer: Drawer(
         child: Container(
-          decoration: const BoxDecoration(
+          decoration:  BoxDecoration(
               gradient: LinearGradient(
                   begin: Alignment.bottomRight,
                   end: Alignment.topRight,
                   colors: [
-                    Colors.orangeAccent,
-                    Colors.orange,
-                    Colors.redAccent
+                    Colors.pink,
+                    Colors.white,
+                    Colors.blue
                   ])),
           child: ListView(
             children: [

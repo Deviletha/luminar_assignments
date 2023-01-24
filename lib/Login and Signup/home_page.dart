@@ -5,6 +5,8 @@ import 'package:luminar_assignments/Login%20and%20Signup/sign_up_page.dart';
 void main() {
   runApp(MaterialApp(
     home: Home(),
+    theme: ThemeData(primarySwatch: Colors.lightBlue),
+    debugShowCheckedModeBanner: false,
   ));
 }
 
