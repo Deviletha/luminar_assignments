@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:luminar_assignments/UI%20Task/BottomNavBar.dart';
 import 'package:luminar_assignments/UI%20Task/UI%20Task%20page%201.dart';
-import 'package:luminar_assignments/UI%20Task/UI%20task%20page%203.dart';
+
 
 void main() {
   runApp(MaterialApp(
@@ -89,7 +90,7 @@ class UItask_2 extends StatelessWidget {
               ),
             ),
             Container(
-              height: 400,
+              height: 350,
               child: Image.asset(
                   "assets/icons/person-hold-mobile-phone-point-blank-screen-removebg-preview.png"),
             ),
@@ -120,7 +121,7 @@ class UItask_2 extends StatelessWidget {
                   ElevatedButton(
                       style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.indigo),
-                      onPressed: () { Navigator.push(context, MaterialPageRoute(builder: (context) => UItask_3())); },
+                      onPressed: () { Navigator.push(context, MaterialPageRoute(builder: (context) => Upload_Page())); },
                       child: Row(
                         children: const [
                           Text(

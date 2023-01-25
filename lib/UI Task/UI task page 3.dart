@@ -265,35 +265,6 @@ class UItask_3 extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: 2,
-        items: [
-          BottomNavigationBarItem(
-              icon: Icon(
-                Icons.home,
-                color: Colors.blue,
-              ),
-              label: 'Home'),
-          BottomNavigationBarItem(
-              icon: Icon(
-                Icons.app_registration,
-                color: Colors.blue,
-              ),
-              label: 'Cart'),
-          BottomNavigationBarItem(
-              icon: Icon(
-                Icons.card_giftcard,
-                color: Colors.blue,
-              ),
-              label: 'Account'),
-          BottomNavigationBarItem(
-              icon: Icon(
-                Icons.person_pin,
-                color: Colors.blue,
-              ),
-              label: 'Account')
-        ],
-      ),
     );
   }
 }
