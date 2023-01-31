@@ -13,7 +13,12 @@ var images = [
   "https://media.istockphoto.com/id/1370825295/photo/modern-hotel-room-with-double-bed-night-tables-tv-set-and-cityscape-from-the-window.jpg?b=1&s=170667a&w=0&k=20&c=ltmI5thpj-pfho5VsW23pd0wYYZxtQq6RTejWXXvRwI=",
   "https://media.istockphoto.com/id/1210328194/photo/ocean-sunset-view-from-bedroom-balcony-for-travel-concept.jpg?b=1&s=170667a&w=0&k=20&c=VvPLHfCIazQ0Yq8UewN1fOohBembuH_LbNwZmmQpRLE=",
   "https://media.istockphoto.com/id/903417402/photo/luxury-construction-hotel-with-swimming-pool-at-sunset.jpg?b=1&s=170667a&w=0&k=20&c=hi6Ig3G2CfPBMnlN3O7Nxbvr0670YfmdPGFL8ZRgG0o=",
-  "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aG90ZWwlMjByb29tc3xlbnwwfHwwfHw%3D&w=1000&q=80"
+  "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aG90ZWwlMjByb29tc3xlbnwwfHwwfHw%3D&w=1000&q=80",
+  "https://images.unsplash.com/photo-1608198399988-341f712c3711?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aG90ZWxyb29tfGVufDB8fDB8fA%3D%3D&w=1000&q=80",
+  "https://media.istockphoto.com/id/903417402/photo/luxury-construction-hotel-with-swimming-pool-at-sunset.jpg?b=1&s=170667a&w=0&k=20&c=hi6Ig3G2CfPBMnlN3O7Nxbvr0670YfmdPGFL8ZRgG0o=",
+  "https://media.istockphoto.com/id/1333257934/photo/3d-render-of-a-hotel-waiting-lounge-with-sofa-and-armchair.jpg?b=1&s=170667a&w=0&k=20&c=emyRc6BryH4_qIKCbKYxcK1b049IW7rKnCdlxlq6FP4=",
+  "https://media.istockphoto.com/id/1392171965/photo/portrait-of-an-asian-tourist-woman-standing-nearly-window-looking-to-beautiful-view-with-her.jpg?b=1&s=170667a&w=0&k=20&c=zH2mkkINVmpd_3uZWQ9-GZxILe0UvsaxrqYuJ1pmDXI=",
+  "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bHV4dXJ5JTIwaG90ZWwlMjByb29tfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
 ];
 
 var title = [
@@ -21,7 +26,12 @@ var title = [
   "Grand Hyatt",
   "Taj Malabar",
   "Crowne Plaza",
-  "Presidency"
+  "Presidency",
+  "Fragrant Nature",
+  "Malieckal Heritance",
+  "Malabar House",
+  "Old Harbour Hotel",
+  "Emarald Hotel"
 ];
 var subtitle = [
   "A five star hotel in ",
@@ -29,9 +39,19 @@ var subtitle = [
   "A five star hotel in",
   "A four star hotel in",
   "A five star hotel in",
+  "A five star hotel in ",
+  "A four star hotel in",
+  "A five star hotel in",
+  "A four star hotel in",
+  "A five star hotel in"
 ];
 
 var place = [
+  "Kochi",
+  "Cochin",
+  "Bolgatty",
+  "Kochi",
+  "Cochin",
   "Kochi",
   "Cochin",
   "Bolgatty",
@@ -44,10 +64,20 @@ var rate = [
   "\$109 / night",
   "\$79 / night",
   "\$119 / night",
+  "\$89 / night",
+  "\$149 / night",
+  "\$109 / night",
+  "\$79 / night",
+  "\$119 / night",
   "\$89 / night"
 ];
 
 var rating = [
+  "4.8⭐",
+  "4.6⭐",
+  "4.1⭐",
+  "4.2⭐",
+  "3.9⭐",
   "4.8⭐",
   "4.6⭐",
   "4.1⭐",
@@ -161,44 +191,47 @@ class _Hotel_BookingState extends State<Hotel_Booking> {
                                     ),
                                     Expanded(
                                         flex: 3,
-                                        child: Column(
-                                          crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                          children: [
-                                            Text(
-                                              title[index],
-                                              style: TextStyle(
-                                                  fontSize: 20,
-                                                  fontWeight: FontWeight.bold,
-                                                  color: Colors.black),
-                                            ),
-                                            Text(
-                                              subtitle[index],
-                                              style: TextStyle(
-                                                  fontSize: 15, color: Colors.grey),
-                                            ),
-                                            Text(
-                                              place[index],
-                                              style: TextStyle(
-                                                  fontSize: 15, color: Colors.grey),
-                                            ),
-                                            Row(
-                                              mainAxisAlignment:
-                                              MainAxisAlignment.spaceBetween,
-                                              children: [
-                                                Text(
-                                                  rate[index],
-                                                  style:
-                                                  TextStyle(color: Colors.blue),
-                                                ),
-                                                Text(
-                                                  rating[index],
-                                                  style:
-                                                  TextStyle(color: Colors.blue),
-                                                )
-                                              ],
-                                            )
-                                          ],
+                                        child: Padding(
+                                          padding: const EdgeInsets.all(8.0 ),
+                                          child: Column(
+                                            crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                            children: [
+                                              Text(
+                                                title[index],
+                                                style: TextStyle(
+                                                    fontSize: 20,
+                                                    fontWeight: FontWeight.bold,
+                                                    color: Colors.black),
+                                              ),
+                                              Text(
+                                                subtitle[index],
+                                                style: TextStyle(
+                                                    fontSize: 15, color: Colors.grey),
+                                              ),
+                                              Text(
+                                                place[index],
+                                                style: TextStyle(
+                                                    fontSize: 15, color: Colors.grey),
+                                              ),
+                                              Row(
+                                                mainAxisAlignment:
+                                                MainAxisAlignment.spaceBetween,
+                                                children: [
+                                                  Text(
+                                                    rate[index],
+                                                    style:
+                                                    TextStyle(color: Colors.blue),
+                                                  ),
+                                                  Text(
+                                                    rating[index],
+                                                    style:
+                                                    TextStyle(color: Colors.blue),
+                                                  )
+                                                ],
+                                              )
+                                            ],
+                                          ),
                                         ))
                                   ],
                                 ),
