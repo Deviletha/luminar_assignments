@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:luminar_assignments/UI%20Task/UI%20task%20page%203.dart';
 
-void main() {
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    theme: ThemeData(primarySwatch: Colors.lightBlue),
-    home: UItask_4(),
-  ));
-}
+// void main() {
+//   runApp(MaterialApp(
+//     debugShowCheckedModeBanner: false,
+//     theme: ThemeData(primarySwatch: Colors.lightBlue),
+//     home: UItask_4(),
+//   ));
+// }
 
 class UItask_4 extends StatelessWidget {
   @override
