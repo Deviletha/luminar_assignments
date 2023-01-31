@@ -272,6 +272,28 @@ class _Hotel_BookingState extends State<Hotel_Booking> {
               ])),
         ],
       ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const [
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.home,
+                color: Colors.blue,
+              ),
+              label: 'Home'),
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.search,
+                color: Colors.blue,
+              ),
+              label: 'Explore'),
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.person,
+                color: Colors.blue,
+              ),
+              label: 'Account')
+        ],
+      ),
     );
   }
 }
