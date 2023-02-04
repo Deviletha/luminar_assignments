@@ -110,7 +110,7 @@ class _utubeState extends State<utube> {
                       borderRadius: BorderRadius.all(Radius.circular(20)),
                     ),
                     height: 30,
-                    width: 50,
+                    width: 35,
                     child: Center(
                       child: Text("All",
                           style: TextStyle(color: Colors.black)),
@@ -155,7 +155,7 @@ class _utubeState extends State<utube> {
                       borderRadius: BorderRadius.all(Radius.circular(20)),
                     ),
                     height: 30,
-                    width: 150,
+                    width: 120,
                     child: Center(
                       child: Text("Malayalam Cinemas",
                           style: TextStyle(color: Colors.white)),
@@ -170,7 +170,7 @@ class _utubeState extends State<utube> {
                       borderRadius: BorderRadius.all(Radius.circular(20)),
                     ),
                     height: 30,
-                    width: 70,
+                    width: 60,
                     child: Center(
                       child: Text("Jukebox",
                           style: TextStyle(color: Colors.white)),
