@@ -178,6 +178,7 @@ class _utubeState extends State<utube> {
                   ),
                 ],
               ),
+              // utubelist()
             ]
           )
           )
@@ -185,4 +186,37 @@ class _utubeState extends State<utube> {
       ),
     );
   }
+}
+
+class utubelist extends StatelessWidget{
+  var image = [
+    "https://media.istockphoto.com/id/901211936/photo/woman-relaxing-and-listening-to-music.jpg?b=1&s=170667a&w=0&k=20&c=maL7lB3Mm1yr-_AZIKLEYjWJlXaASVgNcvdwZrKfKYo=",
+    "https://images.unsplash.com/photo-1463592177119-bab2a00f3ccb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Ym9sbHl3b29kJTIwZGFuY2V8ZW58MHx8MHx8&w=1000&q=80",
+    "https://plus.unsplash.com/premium_photo-1661329832448-b79c0fd51890?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aW5kaWFuJTIwY2xhc3NpY2FsJTIwZGFuY2V8ZW58MHx8MHx8&w=1000&q=80",
+    "https://images.unsplash.com/photo-1526095179574-86e545346ae6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8emVicmF8ZW58MHx8MHx8&w=1000&q=80"
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView.builder(itemBuilder: (context, index) {
+      return Column(
+        children: [
+          Container(
+            height: 100,
+            width: double.infinity,
+            child: Image(image: NetworkImage(image[index]),),
+          ),
+          ListTile(
+            leading: CircleAvatar(
+              backgroundImage: AssetImage("assets/icons/601074e4-4a6e-4339-9f7e-3bb718dc1910.jpeg"),
+            ),
+            title: Text("Relaxing Malayalam Songs | Feel Good Songs",style: TextStyle(fontSize: 18,color: Colors.white)),
+            subtitle: Text("Deviletha Sai. 3.2M views.  1 year ago",style: TextStyle(fontSize: 14,color: Colors.grey),),
+          )
+        ],
+      );
+    },
+    itemCount: image.length,);
+  }
+
 }
