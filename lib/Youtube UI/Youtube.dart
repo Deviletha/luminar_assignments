@@ -15,11 +15,29 @@ class utube extends StatefulWidget {
 class _utubeState extends State<utube> {
   var image = [
     "https://media.istockphoto.com/id/901211936/photo/woman-relaxing-and-listening-to-music.jpg?b=1&s=170667a&w=0&k=20&c=maL7lB3Mm1yr-_AZIKLEYjWJlXaASVgNcvdwZrKfKYo=",
-    "https://images.unsplash.com/photo-1463592177119-bab2a00f3ccb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Ym9sbHl3b29kJTIwZGFuY2V8ZW58MHx8MHx8&w=1000&q=80",
-    "https://plus.unsplash.com/premium_photo-1661329832448-b79c0fd51890?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aW5kaWFuJTIwY2xhc3NpY2FsJTIwZGFuY2V8ZW58MHx8MHx8&w=1000&q=80",
+    "https://media.istockphoto.com/id/944112198/photo/dance-form-indian-classical-feet-with-ghungru-bharatnatyam-katthak.jpg?b=1&s=170667a&w=0&k=20&c=2n3uTav4s60nJIbf_0I2WcZ15PsXQHy5A94wW623kX4=",
+    "https://thred.com/wp-content/uploads/2022/04/photo-1487180144351-b8472da7d491_ixlibrb-1.2.jpg",
     "https://images.unsplash.com/photo-1526095179574-86e545346ae6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8emVicmF8ZW58MHx8MHx8&w=1000&q=80",
-    "https://images.unsplash.com/photo-1630910315693-99da9cf76efa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8YmlraW5nfGVufDB8fDB8fA%3D%3D&w=1000&q=80",
-    "https://images.unsplash.com/photo-1516728513226-23c4045123a0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bW90b3JiaWtlJTIwcmFjaW5nfGVufDB8fDB8fA%3D%3D&w=1000&q=80"
+    "https://media.istockphoto.com/id/1270401890/photo/portrait-of-female-biker-smiling-for-camera-in-public-park.jpg?b=1&s=170667a&w=0&k=20&c=w0nVGEwV6GkNglEe608hxCPK3TmdY2SF0USZz_Yyj_A=",
+    "https://images.unsplash.com/photo-1609174470568-ac0c96458a67?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aGltYWxheWFuJTIwYmlrZXxlbnwwfHwwfHw%3D&w=1000&q=80",
+  ];
+
+  var duration = [
+    "02 :12 ",
+    "06 :12 ",
+    "02 :48 ",
+    "05 :25 ",
+    "02 :40 ",
+    "03 :18 ",
+  ];
+
+  var titile = [
+    "Relaxing Malayalam Songs | Feel Good Songs",
+    "Classical Dance | Classical Dance Performance",
+    "Relaxing Malayalam Songs | Feel Good Songs",
+    "Animals are So cute | Animal planet",
+    "Enjoy the Cycling | Morning view",
+    "Ready to race.. | Enjoying the life",
   ];
 
   @override
@@ -44,11 +62,11 @@ class _utubeState extends State<utube> {
               IconButton(
                   onPressed: () {},
                   icon: Icon(
-                    Icons.devices_outlined,
+                    Icons.cast,
                     color: Colors.white,
                   )),
               SizedBox(
-                width: 10,
+                width: 5,
               ),
               IconButton(
                   onPressed: () {},
@@ -57,7 +75,7 @@ class _utubeState extends State<utube> {
                     color: Colors.white,
                   )),
               SizedBox(
-                width: 10,
+                width: 5,
               ),
               IconButton(
                   onPressed: () {},
@@ -66,7 +84,7 @@ class _utubeState extends State<utube> {
                     color: Colors.white,
                   )),
               SizedBox(
-                width: 10,
+                width: 5,
               ),
               CircleAvatar(
                 backgroundImage: AssetImage(
@@ -169,10 +187,19 @@ class _utubeState extends State<utube> {
                 return Column(
                   children: [
                     Container(
+                      decoration: BoxDecoration(
+                          image: DecorationImage(
+                              image: NetworkImage(image[index]),
+                              fit: BoxFit.cover)),
                       height: 200,
                       width: double.infinity,
-                      child: Image(fit: BoxFit.cover,
-                        image: NetworkImage(image[index]),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          // Text("CC"),
+                          Text(duration[index],style: TextStyle(fontSize: 15),)
+                        ],
                       ),
                     ),
                     ListTile(
@@ -180,12 +207,14 @@ class _utubeState extends State<utube> {
                         backgroundImage: AssetImage(
                             "assets/icons/601074e4-4a6e-4339-9f7e-3bb718dc1910.jpeg"),
                       ),
-                      title: Text("Relaxing Malayalam Songs | Feel Good Songs",
+                      title: Text(titile[index],
                           style: TextStyle(fontSize: 18, color: Colors.white)),
                       subtitle: Text(
                         "Deviletha Sai. 3.2M views.  1 year ago",
                         style: TextStyle(fontSize: 14, color: Colors.grey),
                       ),
+                      trailing: IconButton(
+                          onPressed: () {}, icon: Icon(Icons.more_vert_sharp)),
                     )
                   ],
                 );
